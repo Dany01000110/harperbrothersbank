@@ -121,6 +121,7 @@ section#home .container .subscribe .buttons-subs .personal {
     font-weight: 700;
     background-color: #F8BF88;
     border-radius: 5px;
+    outline: none;
     transition: all .2s ease-in-out;
 }
 
@@ -129,6 +130,7 @@ section#home .container .subscribe .buttons-subs .business {
     font-weight: 700;
     background-color: #FF9F88;
     border-radius: 5px;
+    outline: none;
     transition: all .2s ease-in-out;
 }
 
@@ -139,6 +141,7 @@ section#home .container .subscribe .buttons-subs .business:hover {
 section#home .container .subscribe .subtitle-subs a {
     color: #00373F;
     font-weight: 700;
+    outline: none;
     text-decoration: none;
 }
 
@@ -167,6 +170,7 @@ section#home .container .subscribe .faq ul {
 
 section#home .container .subscribe .faq a {
     color: rgba(0, 0, 0, 0.50);
+    outline: none;
     text-decoration: none;
 }
 
@@ -284,6 +288,7 @@ section#offers .card .offer-about {
     text-decoration: none;
     border-radius: 5px;
     background-color: #F8BF88;
+    outline: none;
     transition: all .2s ease-in-out;
 }
 
@@ -404,6 +409,7 @@ section#footer .newslatter input[type=submit] {
     background-color: #F8BF88;
     border: none;
     border-radius: 5px;
+    outline: none;
     transition: all .2s ease-in-out;
 }
 
@@ -421,6 +427,7 @@ section#footer .newslatter .disclamer {
 
 section#footer .newslatter .disclamer a {
     color: #fff;
+    outline: none;
 }
 
 section#footer .copy {
@@ -434,6 +441,7 @@ section#footer .logo {
     position: relative;
     top: -115px;
     right: 100px;
+    outline: none;
 }
 
 .header {
@@ -505,8 +513,111 @@ section#footer .logo {
     background-color: #fcb574;
 }
 
+/* .nav .menu-mobile {
+    width: 20px;
+} */
+
+.nav .menu-mobile .button-menu-mobile {
+    display: none;
+}
+
+.nav .menu-mobile .button-menu-mobile-close {
+    display: none;
+}
+
 @media screen and (max-width: 1300px) {
     .ball-red2, .wave2, .ball-yellow2 {
         display: none;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .nav .menu-mobile .button-menu-mobile.active {
+        display: block;
+        float: right;
+        cursor: pointer;
+        margin: -50px 200px 0 0;
+        transition: all .2s ease-in-out;
+    }
+
+    .nav .menu-mobile .button-menu-mobile-close {
+        position: fixed;
+        top: 70px;
+        right: -50px;
+        cursor: pointer;
+        margin: -35px 150px 0 0;
+        z-index: 99999;
+        transition: all .2s ease-in-out;
+    }
+    
+    .nav .menu-mobile .button-menu-mobile-close.active {
+        display: block;
+    }
+
+    .left {
+        position: fixed;
+        width: 100%;
+        height: 0px;
+        margin: -100% 0 0 -100px;
+        background-color: #00606B;
+        text-align: center;
+        transition: all 1s ease-in-out;
+        z-index: 9999;
+    }
+
+    .left.active {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        margin: -84px 0 0 -100px;
+        background-color: #00606B;
+        text-align: center;
+        transition: all 1s ease-in-out;
+        z-index: 9999;
+    }
+
+    .nav ul li {
+        display: block;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .left ul {
+        margin: 35px 0 0 0!important;
+    }
+
+    .right {
+        display: none;
+        float: left!important;
+        position: fixed;
+        width: 225px;
+        margin: 0 auto;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-53%);
+        text-align: center;
+        z-index: 99999;
+    }
+
+    .right .login {
+        margin: 0 0 20px 0;
+    }
+
+    .right.active {
+        display: block;
+    }
+
+    .right .signup {
+        margin: 0;
+    }
+
+    section#home .container .subscribe {
+        float: left;
+        margin-top: 350px;
+        width: 339px;
+        margin: 350px auto 0 auto;
+        border-radius: 5px;
+        background-color: #fff;
+        overflow: hidden;
     }
 }
